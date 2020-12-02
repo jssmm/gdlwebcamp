@@ -164,6 +164,5 @@ $(function() {
         var enlace = $(this).attr('href');
         $(enlace).fadeIn(1000);
         return false;
-
     });
 });
