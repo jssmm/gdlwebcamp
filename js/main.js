@@ -4,6 +4,17 @@
     var regalo = document.getElementById('regalo');
 
     document.addEventListener('DOMContentLoaded', function(){
+        
+        //Mapa de leaflet JS
+        var map = L.map('mapa').setView([20.670717373162738, -103.30800457633516], 17);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([20.670717373162738, -103.30800457633516]).addTo(map)
+            .bindPopup('Cada del chen<br> Caiganle.')
+            .openPopup();
 
         //Campos datos usuario
         var nombre = document.getElementById('nombre');
